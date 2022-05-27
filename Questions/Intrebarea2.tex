@@ -1,7 +1,39 @@
-\subsection{Exercitiul 2}
+\subsection{Problema 2}
 
 
-\begin{frame}[fragile]{Exercitiul 2}
+\begin{frame}[fragile]{Problema 2}
+ Folositi plonoamele Taylor ca sa aratati faptul ca, pentru lungimile de unda mari, prin legea lui Plank se obtin rezultate aproximativ egale cu legea Rayleight-Jeans 
+\end{frame}
 
-    addsdsa
+\begin{frame}[fragile]{Problema 2}
+ Putem folosi urmatoarea serie Taylor:
+\begin{equation*}
+    \large
+    e^{x} = \sum_{n=0}^{\infty}i=\frac{x^n}{n!} =  1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} ... \:\: R = \infty
+\end{equation*}
+
+Avem:
+\begin{equation*}
+    f(\lambda) = \frac{8\pi h c \lambda^{-5}}{e^{hc / \lambda k T}-1}
+\end{equation*}
+Notam cu:
+\begin{equation*}
+x = hc / \lambda k T
+\end{equation*}
+\end{frame}
+
+\begin{frame}[fragile]{Problema 2}
+
+\begin{equation*}
+\large
+ f(\lambda) = \frac{8 \pi h c \lambda^{-5}}{[1+ \frac{h c}{\lambda k T}+ \frac{1}{2!}( \frac{h c}{\lambda k T})^2+ \frac{1}{3!}( \frac{h c}{\lambda k T})^3 + ...]-1}
+\end{equation*}
+\begin{equation*}
+ \approx \frac{8 \pi h c \lambda^{-5}}{1+ \frac{hc}{\lambda K T} - 1}
+\end{equation*}
+\begin{equation*}
+= \frac{8 \pi k T}{\lambda^{4}}
+\end{equation*}
+Aceasta este de fapt legea lui Rayleigh-Jeans.
+Astfel, daca \(\lambda\) este mare si termenii seriei Taylor sunt mici in comparatie cu primul termen (nenul), aproximarea legii lui Planck folosind doar primul polinom Taylor conduce la legea lui Rayleigh-Jeans.
 \end{frame}

@@ -1,7 +1,97 @@
-\subsection{Exercitiul 1}
+\subsection{Problema 1}
 
 
-\begin{frame}[fragile]{Exercitiul 1}
+\begin{frame}[fragile]{Problema 1}
+\parindent 10mm 
+    Folositi regula lui L'Hopital pentru a demonstra ca legea lui Plank rezulta in urmatoarele:
+    \begin{equation}
+        \lim_{\lambda\to 0^+} f(\lambda) = 0 \:\:si  \lim_{\lambda\to \infty} f(\lambda) = 0
+    \end{equation}
+    
+    si astfel demonstrand ca legea lui Plank este mai buna decat Legea Rayleigh-Jeans pentru lungimile de unda scurte.
+\end{frame}
 
-    addsdsa
+\begin{frame}[fragile]{Problema 1}
+\parindent 10mm 
+\Large
+    \begin{equation*}
+    
+        f(\lambda) = \frac{8\pi h c \lambda^{-5}}{e^{h c/\lambda k T}-1}=
+        \frac{a\lambda^{-5}}{e^{b/(\lambda T)}-1}
+        \\
+        \vspace{1ex}%
+        \small
+        Notam cu: \\
+        a = 8 \pi h c \\
+        \vspace{1ex}%
+        b = \dfrac{hc}{k}
+        
+    \end{equation*}
+\end{frame}
+
+\begin{frame}[fragile]{Problema 1}
+
+\centering
+    \begin{equation*}
+    \lim_{\lambda\to 0^+} f(\lambda) = \lim_{\lambda\to 0^+}  \frac{a\lambda^{-5}}{e^{b/(\lambda T)}-1}\rightarrow\frac{\infty}{\infty} 
+   \end{equation*}
+    si :
+    \begin{equation*}
+    \lim_{\lambda\to \infty} f(\lambda) = \lim_{\lambda\to \infty} \frac{a \lambda^{-5}}{e^{b/(\lambda T)}-1}\rightarrow \frac{0}{0}
+        
+    \end{equation*}
+    In ambele cazuri se poate folosi regula lui L'hopital
+\end{frame}
+
+\begin{frame}[fragile]{Problema 1}
+\centering
+    Vom rezolva limita catre infinit:
+    \begin{equation*}
+    \lim_{\lambda\to \infty} f(\lambda) = \lim_{\lambda\to \infty} \frac{\frac{d}{dx}(a \lambda^{-5})}{\frac{d}{dx}e^{b/(\lambda T)}-1}
+    \end{equation*}
+    \begin{equation*}
+    = \lim_{\lambda\to \infty} \frac{-5 a \lambda^{-6}}{e^{b/\lambda T}[-\frac{b}{(\lambda T)^2}T]}
+    \end{equation*}
+    \begin{equation*}
+     = \frac{-5 a T^2}{-b T}\lim_{\lambda\to \infty}\frac{\lambda^2 \lambda^{-6}}{e^{b/\lambda T}} 
+     \end{equation*}
+    \begin{equation*}
+    = \frac{5 a T}{b} \lim_{\lambda\to \infty} \frac{\lambda^{-4}}{e^{b/{\lambda T}}} = \frac{0}{1} = 0
+    \end{equation*}
+\end{frame}
+
+\begin{frame}[fragile]{Problema 1}
+\centering
+    Vom rezolva limita catre \(0^+\):
+    \begin{equation*}
+    \lim_{\lambda\to 0^+} f(\lambda) = \frac{5 a T}{b} \lim_{\lambda\to 0^+} \frac{\lambda^{-4}}{e^{b/(\lambda T)}} \rightarrow \frac{\infty}{\infty}
+    \end{equation*}
+    \begin{equation*}
+    \lim_{\lambda\to 0^+} f(\lambda) =  \frac{5 a T}{b} \lim_{\lambda\to 0^+} \frac{-4 \lambda^{-5}}{[-\frac{b}{(\lambda T)^2}T]}
+    \end{equation*}
+    \begin{equation*}
+    =\frac{20 a T^{2}}{b^2} \lim_{\lambda\to 0^+} \frac{\lambda^{-3}}{e^{b/\lambda T}} \rightarrow \frac{\infty}{\infty}
+    \end{equation*}
+    Notam cu:
+    \begin{equation*}
+    k_1 = \frac{20 a T^{2}}{b^2}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}[fragile]{Problema 1}
+\centering
+  Se va folosi L'hopital de mai multe ori iar constantele rezultate din aplicarea regulii se vor nota cu \( k_i = 1,2, ... ,n \) si se vor scoate in fata limitei \\
+    \begin{equation*}
+    \lim_{\lambda\to 0^+} f(\lambda) = k_1 \lim_{\lambda\to 0^+} \frac{\lambda^{-3}}{e^{b/\lambda T}}
+    \end{equation*}
+    \begin{equation*}
+    = k_2 \lim_{\lambda\to 0^+} \frac{\lambda^{-2}}{e^{b/\lambda T}}
+    \end{equation*}
+    \begin{equation*}
+    = k_3 \lim_{\lambda\to 0^+} \frac{\lambda^{-1}}{e^{b/\lambda T}}
+    \end{equation*}
+    \begin{equation*}
+    = k_4 \lim_{\lambda\to 0^+} \frac{1}{e^{b/\lambda T}} = 0
+    \end{equation*}
 \end{frame}
